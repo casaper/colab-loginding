@@ -1,0 +1,63 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: stretch;
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  flex-wrap: wrap;
+}
+
+div {
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+}
+
+.logo,
+.online,
+.questions {
+  flex: 0 0 100%;
+}
+
+.logo {
+  order: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.logo-image {
+  flex: 0 0 100%;
+}
+.online-desktop {
+  display: none;
+  flex: 0 0 100%;
+}
+.online {
+  order: 3;
+}
+.questions {
+  order: 2;
+}
+@media screen and (min-width: 768px) {
+  .online {
+    display: none;
+  }
+  .logo {
+    flex: 0 0 25%;
+    order: 1;
+  }
+  .online-desktop {
+    display: block;
+  }
+
+  .questions {
+    flex: 0 0 75%;
+    order: 2;
+  }
+}
